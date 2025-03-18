@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Manual HTML 5</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+</head>
+
+<body class="light-mode">
+    <div class="container">
+        <header>
+            <h1>Manual de HTML - Guia Completo</h1>
+            <p>Aprenda a criar um HTML bem estruturado, com boas práticas, explicações detalhadas e responsividade</p>
+
+            <nav class="navbar">
+                <div class="menu-icon" id="menu-icon" aria-label="Abrir menu de navegação" role="button" tabindex="0">
+
+                    <!-- Ícone de hambúrguer -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#intro">Estrutura Básica</a></li>
+                    <li><a href="#tags-essenciais">Tags Essenciais</a></li>
+                    <li><a href="#tags-formatacao-texto">Formatação de Texto</a></li>
+                    <li><a href="#boas-praticas">Boas Práticas</a></li>
+                </ul>
+                <div class="search-bar">
+                    <input type="text" placeholder="Pesquisar...">
+                    <i class="fa fa-search"></i>
+                </div>
+            </nav>
+        </header>
+        <main class="container">
+            <section id="intro">
+                <h2>Construção Inicial de um documento</h2>
+                <p>Abaixo está um exemplo da estrutura básica de um documento HTML.</p>
+            <section id = "editor-html">
+                <div class="editor-container">
+                    <div class="code-editor">
+                        <h3>Editor HTML</h3>
+                        <div class="container-editor">
+                            <textarea id="html-code" class="code-area" placeholder="Escreva seu código HTML aqui...">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;Título da Página&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        Conteúdo do site
+    &lt;/body&gt;
+&lt;/html&gt;</textarea>
+                            <div id = "style-code" class="style-code"></div>
+                        </div>
+                    </div>
+                    <div class="preview-code">
+                        <h3>Visualização</h3>
+                        <iframe id="preview-window"></iframe>
+                    </div>
+                </div>
+            </section>
+                </section>
+            <div class="assuntos-container">
+                <ul class="abas">
+                    <li class="aba aberta">Tags Essenciais</li>
+                    <li class="aba">Tags Formatacao Texto</li>
+                    <li class="aba">Boas Práticas</li>
+                </ul>
+
+                <div class="aba-conteudo aberta">
+                    <section id="tags-essenciais">
+                        <h2>Explicação das Principais Tags</h2>
+                        <table class="tag-list">
+                            <tr class="tag-list-tr">
+                                <th>Tag</th>
+                                <th>Descrição</th>
+                            </tr>
+                            <tr>
+                                <td class="tag-table-list">&lt;html&gt;</td>
+                                <td class="description-table-list">Indica ao navegador que é um documento HTML.</td>
+                            </tr>
+                            <tr>
+                                <td class="tag-table-list">&lt;head&gt;</td>
+                                <td class="description-table-list">Armazena informações do documento, como título, CSS e metadados.</td>
+                            </tr>
+                            <tr>
+                                <td class="tag-table-list">&lt;meta charset="UTF-8"&gt;</td>
+                                <td class="description-table-list">Define a codificação UTF-8 para exibir caracteres especiais corretamente.</td>
+                            </tr>
+                            <tr>
+                                <td class="tag-table-list">&lt;title&gt;</td>
+                                <td class="description-table-list">Define o título da página, que aparece na aba do navegador e nos resultados dos motores de busca.</td>
+                            </tr>
+                            <tr>
+                                <td class="tag-table-list">&lt;body&gt;</td>
+                                <td class="description-table-list">Contém o conteúdo visível da página, como textos, imagens, links, vídeos, e tudo o que o usuário verá e interagirá.</td>
+                            </tr>
+                            </table>
+                        </section>
+                    </div>
+                <div class="aba-conteudo">
+                    <section id="tags-formatacao-texto" class="carousel-formatacao">
+                        <h2>Explicação das Tags de Formatação de Texto</h2>
+                        <p><span style="font-size:2em;"><strong>h1</strong></span> <span
+                                style="font-size:1.8em;"><strong>h2</strong></span> <span
+                                style="font-size:1.6em;"><strong>h3</strong></span> <span
+                                style="font-size:1.4em;"><strong>h4</strong></span> <span
+                                style="font-size:1.2em;"><strong>h5</strong></span> <span
+                                style="font-size:1em;"><strong>h6</strong></span></p>
+                        <strong>&lt;h1&gt; a &lt;h6&gt; </strong>Cabeçalhos de diferentes niveis de importância.
+
+                        <div class="carousel-formatacao">
+
+                            <div class="texto-formatado">
+                                <span id="texto-formatado">Texto Formatado.</span>
+                            </div>
+
+                            <div class="slide active" data-tag="strong">
+                                <p><strong>&lt;strong&gt;</strong>: Usada para destacar o texto, geralmente exibindo-o em
+                                    negrito. É também uma tag semântica, indicando que o texto é importante.</p>
+                            </div>
+
+                            <div class="slide" data-tag="em">
+                                <p><strong>&lt;em&gt;</strong>: Usada para enfatizar o texto, geralmente exibindo-o em itálico.
+                                    Também possui significado semântico, sugerindo uma ênfase de significado.</p>
+                            </div>
+
+                            <div class="slide" data-tag="mark">
+                                <p><strong>&lt;mark&gt;</strong>: Destaca o texto, como se tivesse sido marcado com um marcador.
+                                    É útil para chamar a atenção para um trecho específico de texto.</p>
+                            </div>
+
+                            <div class="slide" data-tag="small">
+                                <p><strong>&lt;small&gt;</strong>: Diminui o tamanho do <small><strong>Texto</strong></small>,
+                                    geralmente usado para avisos ou informações menos importantes.</p>
+                            </div>
+
+                            <div class="slide" data-tag="del">
+                                <p><strong>&lt;del&gt;</strong>: Indica que o <del>Texto</del> foi removido ou não é mais
+                                    relevante, geralmente exibindo o texto <del>riscado</del>.</p>
+                            </div>
+
+                            <div class="slide" data-tag="ins">
+                                <p><strong>&lt;ins&gt;</strong>: Indica que o <ins>Texto</ins> foi inserido, geralmente exibido
+                                    como texto <ins>sublinhado</ins>.</p>
+                            </div>
+
+                            <div class="slide" data-tag="sub">
+                                <p><strong>&lt;sub&gt;</strong>: Exibe o texto como subscrito, útil para fórmulas químicas, como
+                                    H<sub>2</sub>O.</p>
+                            </div>
+
+                            <div class="slide" data-tag="sup">
+                                <p><strong>&lt;sup&gt;</strong>: Exibe o texto como sobrescrito, útil para expoentes, como
+                                    2<sup>3</sup> (2 ao cubo).</p>
+                            </div>
+
+                            <div class="btn-carrossel-formatacao">
+                                <button class="prev">&larr;</button>
+                                <button class="next">&rarr;</button>
+                            </div>
+                        </div>
+                        </section>
+                    </div>
+                <div class="aba-conteudo">
+                    <section id="boas-praticas">
+                        <h2>Boas Práticas em HTML</h2>
+                        <p>As boas práticas em HTML ajudam a garantir que o código seja bem estruturado, acessível e de fácil
+                            manutenção, proporcionando uma melhor experiência tanto para desenvolvedores quanto para os
+                            usuários.</p>
+                        <ul>
+                            <li><strong>Indentação: </strong>Mantenha o códido bem indentado e organizado, para facilitar o
+                                entendimento.</li>
+                            <li><strong>Fechar todas as tags: </strong>Mesmo as tags auto-fechadas (ex:&lt;br&gt; para quebra de
+                                linha) devem ser usadas de forma consistente.</li>
+                            <li><strong>Uso de comentários: </strong>Use comentários (&lt;!-- Comentário --&gt;) para documentar
+                                e explicar partes importantes do código.</li>
+                            <li><strong>Atributos semânticos: </strong>Utilize atributos como `alt` em imagens para melhorar a
+                                acessibilidade e o SEO.</li>
+                            <li><strong>Organização de conteúdo: </strong>Estruture o conteúdo usando tags semânticas como
+                                &lt;section&gt;, &lt;article&gt;, &lt;nav&gt; para indicar áreas distintas.</li>
+                            <li><strong>SEO(Otimização para Motores de Busca): </strong>Use metadados, URLs amigáveis e conteúdo
+                                de qualidade para otimizar a página para motores de busca e melhorar o posicionamento.</li>
+                        </ul>
+                    </section>
+                    </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+<!--<pre><code><span class="tag">&lt;!DOCTYPE html&gt;</span> &lt;!-- <span class="comment">Declaração do tipo de documento HTML5</span> --&gt;
+&lt;<span class="tag">html</span> <span class="attribute">lang</span>="pt-br"&gt;
+    &lt;<span class="tag">head</span>&gt;
+        &lt;<span class="tag">meta</span> <span class="attribute">charset</span>="UTF-8"&gt;
+        &lt;<span class="tag">title</span>&gt;Título da Página&lt;/<span class="tag">title</span>&gt;
+    &lt;/<span class="tag">head</span>&gt;
+    &lt;<span class="tag">body</span>&gt;
+        Conteúdo do site
+    &lt;/<span class="tag">body</span>&gt;
+&lt;/<span class="tag">html</span>&gt;</code></pre>-->
+
+<!--<ul>
+    <li><strong>&lt;html&gt;</strong>: Envolve todo o conteúdo de uma página web, indicando ao navegador que se trata de um documento HTML.</li>
+    <li><strong>&lt;head&gt;</strong>: Contém informações sobre o documento, como o título, links para
+        arquivos CSS, metadados, e outros elementos que não são exibidos diretamente na página.</li>
+    <li><strong>&lt;meta charset="UTF-8"&gt;</strong>: Define a codificação de caracteres para UTF-8,
+        garantindo que caracteres especiais (como acentos) sejam exibidos corretamente.</li>
+    <li><strong>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</strong>:
+        Adapta o site para diferentes tamanhos de tela, tornando-o responsivo e ajustando o layout de
+        acordo com o dispositivo usado.</li>
+    <li><strong>&lt;title&gt;</strong>: Define o título da página, que aparece na aba do navegador e nos
+        resultados dos motores de busca.</li>
+    <li><strong>&lt;body&gt;</strong>: Contém o conteúdo visível da página, como textos, imagens, links,
+        vídeos, e tudo o que o usuário verá e interagirá.</li>
+</ul>-->
+
+<!--<ul>
+    <li><strong>&lt;h1&gt; a &lt;h6&gt;</strong>Cabeçalhos de diferentes niveis de importância. <span style="font-size:2em;"><strong>h1</strong></span> <span style="font-size:1.8em;"><strong>h2</strong></span> <span style="font-size:1.6em;"><strong>h3</strong></span> <span style="font-size:1.4em;"><strong>h4</strong></span> <span style="font-size:1.2em;"><strong>h5</strong></span> <span style="font-size:1em;"><strong>h6</strong></span></li>
+    <li><strong>&lt;strong&gt;</strong>: Usada para destacar o <strong>Texto</strong>, geralmente exibindo-o em negrito. É também uma tag semântica, indicando que o texto é importante.</li>
+    <li><strong>&lt;em&gt;</strong>: Usada para enfatizar o <em>Texto</em>, geralmente exibindo-o em itálico. Também possui significado semântico, sugerindo uma ênfase de significado.</li>
+    <li><strong>&lt;mark&gt;</strong>: Destaca o <mark>Texto</mark> como se tivesse sido marcado com um marcador. É útil para chamar a atenção para um trecho específico de texto.</li>
+    <li><strong>&lt;small&gt;</strong>: Diminui o tamanho do <small><strong>Texto</strong></small>, geralmente usado para avisos ou informações menos importantes.</li>
+    <li><strong>&lt;del&gt;</strong>: Indica que o <del>Texto</del> foi removido ou não é mais relevante, geralmente exibindo o texto <del>riscado</del>.</li>
+    <li><strong>&lt;ins&gt;</strong>: Indica que o <ins>Texto</ins> foi inserido, geralmente exibido como texto <ins>sublinhado</ins>.</li>
+    <li><strong>&lt;sub&gt;</strong>: Exibe o texto como sobrescrito, útil para fórmulas químicas, como H<sub>2</sub>O.</li>
+    <li><strong>&lt;sup&gt;</strong>: Exibe o texto como sobrescrito, útil para expoentes, como 2<sup>3</sup> (2 ao cubo).</li>
+</ul>-->
+
+<!--&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-br"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;Título da Página&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        Conteúdo do site
+    &lt;/body&gt;
+&lt;/html&gt;-->
